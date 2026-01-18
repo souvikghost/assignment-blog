@@ -1,73 +1,68 @@
-# React + TypeScript + Vite
+# Blog Application Assignment Submission
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Thanks for the opportunity for this assignment. Kindly go through this repo to check the work.
 
-Currently, two official plugins are available:
+## Installation
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### Tech Stack Used here
+- ReactJS
+- Tanstack Query
+- TainwindCSS
+- shadcn ui component
 
-## React Compiler
+### Setup Instructions
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+1. **Clone the repository**
+   ```bash
+   git clone <repository-url>
+   ```
 
-## Expanding the ESLint configuration
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+3. **Install required libraries for the assignment** , ie, TanStack Query, Tailwind CSS, and  shadcn/ui
+4. **Start the JSON Server (Backend API)**
+   ```bash
+   npm run server
+   ```
+   The API will run on `http://localhost:3001`
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+5. **Start the Development Server (in a new terminal)**
+   ```bash
+   npm run dev
+   ```
+   The app will run on `http://localhost:5173`
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+### Tasks have been done
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+#### 1. **Get All Blogs**
+- Create a component to display all blogs using `GET /blogs`
+- Use TanStack Query for data fetching
+- Handle loading and error states
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+#### 2. **Get Blog by ID**
+- Implement single blog view using `GET /blogs/:id`
+- Use TanStack Query for data fetching
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+#### 3. **Create a New Blog**
+- Build a form to create a new blog using `POST /blogs`
+- Invalidate queries after successful creation
+
+### API Endpoints Created
+
+The JSON Server provides the following endpoints:
+
+| Method | Endpoint | Description |
+|--------|----------|-------------|
+| GET | `/blogs` | Get all blogs |
+| GET | `/blogs/:id` | Get a specific blog by ID |
+| POST | `/blogs` | Create a new blog |
+
+Thanks again for this opportunity. I'll wait for your evaluation. Please do a mail if accepted/rejected anything. I'll wait.
+
+
+Thanks
+Souvik Ghosh

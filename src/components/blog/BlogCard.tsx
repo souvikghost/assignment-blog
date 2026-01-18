@@ -10,7 +10,6 @@ interface BlogCardProps {
 }
 
 const BlogCard = ({ cardData, setSelectedCardId, selectedCardId }: BlogCardProps) => {
-  console.log(selectedCardId, cardData?.id);
 
   return (
     <Card onClick={() => setSelectedCardId(cardData?.id)} className={`relative w-full overflow-hidden shrink-0 p-3! border  cursor-pointer ${selectedCardId == cardData?.id ? `border-white/30 shadow-[0px_0px_20px_0px_rgba(106,114,130,0.3)]` : `border-white/10`}`}>

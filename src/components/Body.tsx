@@ -30,7 +30,7 @@ const Body = () => {
           <BlogList selectedCardId={selectedCardId} setSelectedCardId={setSelectedCardId} data={data} isLoading={isLoading} isError={isError} />
         </aside>
 
-        <main className={`col-span-9 absolute top-0 left-0 h-full w-full z-50 bg-black  min-h-0 md:relative  rounded-2xl border border-white/10 p-4! ${selectedBlog ? `block`:`hidden`}`}>
+        <main className={`col-span-9 absolute top-0 left-0 h-full w-full z-50 bg-black  min-h-0 md:relative  rounded-2xl border border-white/10 p-4! ${selectedBlog ? `block`:`hidden md:block`}`}>
           <BlogDetails blog={selectedBlog ?? null} />
 
           {selectedBlog && (<Button type="button" onClick={() => setSelectedCardId(null)} variant="ghost" className="absolute top-4 right-4 bg-white/10 backdrop-blur-sm cursor-pointer px-4! shadow-[inset_2px_3px_3px_0px_rgba(183,183,183,0.24),inset_-1px_-2px_3px_0px_rgba(255,255,255,0.24)] border border-white/10 rounded-2xl!">
